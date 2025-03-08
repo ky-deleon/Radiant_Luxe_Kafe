@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE4FFB3A-EB78-4BCE-A728-9827B4F0F27B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Radiant_Luxe_Kafe</RootNamespace>
+    <AssemblyName>Radiant Luxe Kafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.2.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CartControl.Designer.cs">
+      <DependentUpon>CartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coffee.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mError.Designer.cs">
+      <DependentUpon>mError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mIncompleteInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mIncompleteInfo.Designer.cs">
+      <DependentUpon>mIncompleteInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mInvalidUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mInvalidUP.Designer.cs">
+      <DependentUpon>mInvalidUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mItemAdded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mItemAdded.Designer.cs">
+      <DependentUpon>mItemAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mLoadedSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mLoadedSuccess.Designer.cs">
+      <DependentUpon>mLoadedSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mLoginSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mLoginSuccess.Designer.cs">
+      <DependentUpon>mLoginSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mLogout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mLogout.Designer.cs">
+      <DependentUpon>mLogout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mNotFoundinDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mNotFoundinDatabase.Designer.cs">
+      <DependentUpon>mNotFoundinDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mPassMismatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mPassMismatch.Designer.cs">
+      <DependentUpon>mPassMismatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mRecordInserted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mRecordInserted.Designer.cs">
+      <DependentUpon>mRecordInserted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCoffeePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowCoffeePanel.Designer.cs">
+      <DependentUpon>ShowCoffeePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashscreen.Designer.cs">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CartControl.resx">
+      <DependentUpon>CartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mError.resx">
+      <DependentUpon>mError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mIncompleteInfo.resx">
+      <DependentUpon>mIncompleteInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mInvalidUP.resx">
+      <DependentUpon>mInvalidUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mItemAdded.resx">
+      <DependentUpon>mItemAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mLoadedSuccess.resx">
+      <DependentUpon>mLoadedSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mLoginSuccess.resx">
+      <DependentUpon>mLoginSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mLogout.resx">
+      <DependentUpon>mLogout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mNotFoundinDatabase.resx">
+      <DependentUpon>mNotFoundinDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mPassMismatch.resx">
+      <DependentUpon>mPassMismatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mRecordInserted.resx">
+      <DependentUpon>mRecordInserted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowCoffeePanel.resx">
+      <DependentUpon>ShowCoffeePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashscreen.resx">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg starting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg starting1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\examplecoffee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash s.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg home 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg home 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg home 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blended caramel frappuccino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blended dark caramel coffee frappuccino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blended java chip frappuccino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blended strawberries &amp; cream frappuccino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blended triple mocha frappuccino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blended vanilla cream frappuccino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot brewed coffee1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot caffe misto1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot espresso1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot flat white1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot signature hot chocolate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot white hot chocolate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iced americano1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iced caffe mocha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iced cappuccino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iced caramel macchiato1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iced green tea latte1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iced white chocolate mocha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\honey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\milk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg order panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m incomp info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m invalid u&amp;p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m item added.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m loaded success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m login success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m not found in database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m pass mismatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m record inserted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fbg home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fbg menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fbg cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fbg about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fbg account.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
